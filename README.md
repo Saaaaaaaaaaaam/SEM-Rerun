@@ -1,1 +1,1 @@
-README
+Master Build Status - [![Build Status](https://travis-ci.com/Saaaaaaaaaaaam/SEM-Rerun.svg?branch=master)](https://travis-ci.com/Saaaaaaaaaaaam/SEM-Rerun)
