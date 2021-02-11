@@ -1,4 +1,4 @@
-- Master Build Status [![Build Status](https://travis-ci.com/Saaaaaaaaaaaam/SEM-Rerun.svg?branch=master)](https://travis-ci.com/Saaaaaaaaaaaam/SEM-Rerun)
+Master Build Status [![Build Status](https://travis-ci.com/Saaaaaaaaaaaam/SEM-Rerun.svg?branch=master)](https://travis-ci.com/Saaaaaaaaaaaam/SEM-Rerun)
 - Licence [![LICENSE](https://img.shields.io/github/license/Saaaaaaaaaaaam/SEM-Rerun.svg?style=flat-square)](https://github.com/Saaaaaaaaaaaam/SEM-Rerun/blob/master/LICENSE)
 - Release [![Releases](https://img.shields.io/github/release/Saaaaaaaaaaaam/SEM-Rerun/all.svg?style=flat-square)](https://github.com/Saaaaaaaaaaaam/SEM-Rerun/releases)
 - Develop Build Status [![Build Status](https://travis-ci.org/Saaaaaaaaaaaam/SEM-Rerun.svg?branch=develop)](https://travis-ci.org/Saaaaaaaaaaaam/SEM-Rerun)
