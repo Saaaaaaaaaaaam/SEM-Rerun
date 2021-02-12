@@ -11,6 +11,10 @@ public class App
 
         // Connect to database
         a.connect();
+        // Get Employee
+        Employee emp = a.getEmployee(255530);
+        // Display results
+        a.displayEmployee(emp);
 
         // Disconnect from database
         a.disconnect();
@@ -87,9 +91,11 @@ public class App
             Statement stmt = con.createStatement();
             // Create string for SQL statement
             String strSelect =
-                    "SELECT emp_no, first_name, last_name "
+                    "SELECT employees.emp_no, first_name, last_name, title "
                             + "FROM employees "
-                            + "WHERE emp_no = " + ID;
+                            + "JOIN titles on (titles.emp_no=employees.emp_no) "
+                            + "WHERE employees.emp_no = " + ID
+                            + " AND titles.to_date = '9999-01-01'";
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery(strSelect);
             // Return new employee if valid.
@@ -100,6 +106,7 @@ public class App
                 emp.emp_no = rset.getInt("emp_no");
                 emp.first_name = rset.getString("first_name");
                 emp.last_name = rset.getString("last_name");
+                emp.title = rset.getString("title");
                 return emp;
             }
             else
@@ -112,4 +119,19 @@ public class App
             return null;
         }
     }
+    public void displayEmployee(Employee emp)
+    {
+        if (emp != null)
+        {
+            System.out.println(
+                    emp.emp_no + " "
+                            + emp.first_name + " "
+                            + emp.last_name + "\n"
+                            + emp.title + "\n"
+                            + "Salary:" + emp.salary + "\n"
+                            + emp.dept_name + "\n"
+                            + "Manager: " + emp.manager + "\n");
+        }
+    }
+
 }
