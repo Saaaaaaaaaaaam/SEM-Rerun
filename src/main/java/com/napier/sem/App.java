@@ -91,10 +91,12 @@ public class App
             Statement stmt = con.createStatement();
             // Create string for SQL statement
             String strSelect =
-                    "SELECT employees.emp_no, first_name, last_name, title, salary "
+                    "SELECT employees.emp_no, first_name, last_name, title, salary, dept_name "
                             + "FROM employees "
                             + "JOIN titles on (titles.emp_no=employees.emp_no) "
-                            + "JOIN salaries on (employees.emp_no=salaries.emp_no)"
+                            + "JOIN salaries on (employees.emp_no=salaries.emp_no) "
+                            + "JOIN dept_emp on (dept_emp.emp_no=employees.emp_no) "
+                            + "JOIN departments on (dept_emp.dept_no=departments.dept_no) "
                             + "WHERE employees.emp_no = " + ID
                             + " AND titles.to_date = '9999-01-01'";
             // Execute SQL statement
