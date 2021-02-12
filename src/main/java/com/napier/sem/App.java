@@ -91,9 +91,10 @@ public class App
             Statement stmt = con.createStatement();
             // Create string for SQL statement
             String strSelect =
-                    "SELECT employees.emp_no, first_name, last_name, title "
+                    "SELECT employees.emp_no, first_name, last_name, title, salary "
                             + "FROM employees "
                             + "JOIN titles on (titles.emp_no=employees.emp_no) "
+                            + "JOIN salaries on (employees.emp_no=salaries.emp_no)"
                             + "WHERE employees.emp_no = " + ID
                             + " AND titles.to_date = '9999-01-01'";
             // Execute SQL statement
@@ -107,6 +108,7 @@ public class App
                 emp.first_name = rset.getString("first_name");
                 emp.last_name = rset.getString("last_name");
                 emp.title = rset.getString("title");
+                emp.salary=rset.getInt("salary");
                 return emp;
             }
             else
