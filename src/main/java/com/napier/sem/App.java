@@ -111,6 +111,7 @@ public class App
                 emp.last_name = rset.getString("last_name");
                 emp.title = rset.getString("title");
                 emp.salary=rset.getInt("salary");
+                emp.manager=rset.getString("manger");
                 return emp;
             }
             else
