@@ -200,7 +200,7 @@ public class App
             Statement stmt = con.createStatement();
             // Create string for SQL statement
             String strSelect =
-                    "SELECT employees.emp_no, employees.first_name, employees.last_name, salaries.salary, titles,title "
+                    "SELECT employees.emp_no, employees.first_name, employees.last_name, salaries.salary "
                             + "FROM employees, salaries, titles "
                             + "WHERE employees.emp_no = salaries.emp_no "
                             + "AND employees.emp_no = titles.emp_no "
@@ -215,7 +215,7 @@ public class App
             while (rset.next())
             {
                 Employee emp = new Employee();
-                emp.title = rset.getString("titles.title");
+
                 emp.emp_no = rset.getInt("employees.emp_no");
                 emp.first_name = rset.getString("employees.first_name");
                 emp.last_name = rset.getString("employees.last_name");
