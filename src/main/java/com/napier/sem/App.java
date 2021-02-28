@@ -23,8 +23,8 @@ public class App
         // Print Data
         printSalaries(employees);
 */
-        Scanner sc = new Scanner(System.in);
-        String role= sc.nextLine();
+        //Scanner sc = new Scanner(System.in);
+        String role= "Engineer";
         ArrayList<Employee> employees=a.getAllSalariesByRole(role);
         printSalaries(employees);
         // Disconnect from database
@@ -189,10 +189,7 @@ public class App
             return null;
         }
     }
-    /**
-     * Prints a list of employees.
-     * @param employees The list of employees to print.
-     */
+
     public ArrayList<Employee> getAllSalariesByRole(String role)
     {
         role= "'"+ role +"'";
