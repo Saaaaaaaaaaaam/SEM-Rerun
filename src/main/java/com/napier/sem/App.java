@@ -2,6 +2,7 @@ package com.napier.sem;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class App
 {
@@ -22,7 +23,9 @@ public class App
         // Print Data
         printSalaries(employees);
 */
-        ArrayList<Employee> employees=a.getAllSalariesByRole("Engineer");
+        Scanner sc = new Scanner(System.in);
+        String role= sc.nextLine();
+        ArrayList<Employee> employees=a.getAllSalariesByRole(role);
         printSalaries(employees);
         // Disconnect from database
         a.disconnect();
